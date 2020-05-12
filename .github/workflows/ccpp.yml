@@ -14,9 +14,9 @@ jobs:
     steps:
           - name: 1
             run:  mkdir build
-              - name: 2
+          - name: 2
             run: cd build
-              - name: 3
+          - name: 3
             run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
-              - name: 4
+          - name: 4
             run: make -j8
