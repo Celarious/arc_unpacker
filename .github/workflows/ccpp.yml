@@ -13,9 +13,9 @@ jobs:
 
     steps:
           - name: 1
-            run:  mkdir build
+            run: mkdir build
           - name: 2
-            run: cd build
+            run:  cd build
           - name: 3
             run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
           - name: 4
