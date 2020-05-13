@@ -13,7 +13,10 @@ jobs:
 
     steps:
       - name: Deps
-        run: npm install
+        run: |
+         npm install boost
+         npm install libpng
+         npm install libjpeg
       - name: 1
         run: mkdir build
       - name: 2
