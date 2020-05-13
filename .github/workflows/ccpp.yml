@@ -12,11 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-          - name: 1
-            run: mkdir build
-          - name: 2
-            run: cd build
-          - name: 3
-            run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
-          - name: 4
-            run: make -j8
+      - name: Deps
+        run: npm install
+      - name: 1
+        run: mkdir build
+      - name: 2
+        run: cd build
+      - name: 3
+        run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
+      - name: 4
+        run: make -j8
