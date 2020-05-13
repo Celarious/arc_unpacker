@@ -13,14 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: 1
-        run: |
-          ls
-          ls ..
-          ls ../..
-          mkdir build
-      - name: 2
-        run: cd build
       - name: 3
         run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
       - name: 4
