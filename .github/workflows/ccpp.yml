@@ -13,6 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: t
+        run: ls
+      - name: t2
+        run: ls ..
       - name: 3
         run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
       - name: 4
