@@ -13,8 +13,6 @@ jobs:
 
     steps:
       - name: 1
-        run: |
-         ls
-         cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
+        run: ls
       - name: 2
-        run: make -j8
+        run: pwd
