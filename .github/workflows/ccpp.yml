@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        name: 1
+      - name: 1
         run: |
          apt-get install boost
          apt-get install zlib
