@@ -15,11 +15,23 @@ jobs:
       - uses: actions/checkout@v2
       - name: 1
         run: |
-         npm install boost
-         npm install zlib
-         sudo apt-get install libpng-dev
-         sudo apt-get install libjpeg-dev
-      - name: 3
+          curl -sSL 'http://llvm.org/apt/llvm-snapshot.gpg.key' | sudo -E apt-key add -
+          echo 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.8 main' | sudo tee -a /etc/apt/sources.list > /dev/null
+          sudo -E apt-add-repository -y 'ppa:ubuntu-toolchain-r/test'
+          sudo -E apt-add-repository -y 'ppa:kalakris/cmake'
+          sudo -E apt-add-repository -y "ppa:boost-latest/ppa"
+          sudo apt-get update
+          sudo apt-get install --force-yes \
+              cmake \
+              clang-3.8 \
+              libboost1.55-dev \
+              libboost-filesystem1.55-dev \
+              libboost-locale1.55-dev \
+              libssl-dev \
+              libpng-dev \
+              libjpeg-dev
+          export CMAKE_CXX_COMPILER=clang++-3.8
+      - name: 2
         run: cmake -DCMAKE_BUILD_TYPE=release # for debug build, change to debug
-      - name: 4
+      - name: 3
         run: make -j8
