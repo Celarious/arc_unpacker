@@ -17,7 +17,7 @@ jobs:
         run: |
          npm install boost
          npm install zlib
-         npm install libpng-dev
+         sudo apt-get install libpng-dev
          npm install libjpeg-dev
       - name: 3
         run: cmake -DCMAKE_BUILD_TYPE=release # for debug build, change to debug
