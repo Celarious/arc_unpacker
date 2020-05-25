@@ -20,6 +20,7 @@ jobs:
           sudo -E apt-add-repository -y 'ppa:ubuntu-toolchain-r/test'
           sudo -E apt-add-repository -y 'ppa:kalakris/cmake'
           sudo -E apt-add-repository -y "ppa:boost-latest/ppa"
+          sudo apt-get clean
           sudo apt-get update
           sudo apt-get install --force-yes \
               cmake \
