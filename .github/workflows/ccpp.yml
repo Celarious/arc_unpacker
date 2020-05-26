@@ -16,7 +16,6 @@ jobs:
       - name: 1
         run: |
           curl -sSL 'https://apt.llvm.org/llvm-snapshot.gpg.key' | sudo -E apt-key add -
-          sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 3D5919B448457EE0 
           echo 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.8 main' | sudo tee -a /etc/apt/sources.list > /dev/null
           sudo -E apt-add-repository -y 'ppa:ubuntu-toolchain-r/test'
           sudo -E apt-add-repository -y 'ppa:kalakris/cmake'
