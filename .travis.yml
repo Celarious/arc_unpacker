@@ -44,7 +44,7 @@ before_install: |
             libssl-dev \
             libpng-dev \
             libjpeg-dev
-        export CMAKE_CXX_COMPILER=clang++-3.8
+        export CMAKE_CXX_COMPILER=/usr/local/clang-7.0.0/bin/clang
     fi
 
 script: |
