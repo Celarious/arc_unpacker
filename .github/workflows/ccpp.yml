@@ -23,14 +23,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install --force-yes \
               cmake \
-              clang-3.8 \
+              clang \
               libboost-dev \
               libboost-filesystem-dev \
               libboost-locale-dev \
               libssl-dev \
               libpng-dev \
               libjpeg-dev
-          export CMAKE_CXX_COMPILER=clang++-3.8
+          export CMAKE_CXX_COMPILER=clang++
       - name: 2
         run: cmake -DCMAKE_BUILD_TYPE=release # for debug build, change to debug
       - name: 3
