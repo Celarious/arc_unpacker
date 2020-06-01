@@ -24,9 +24,9 @@ jobs:
           sudo apt-get install --force-yes \
               cmake \
               clang-3.8 \
-              libboost1.55-dev \
-              libboost-filesystem1.55-dev \
-              libboost-locale1.55-dev \
+              libboost-dev \
+              libboost-filesystem-dev \
+              libboost-locale-dev \
               libssl-dev \
               libpng-dev \
               libjpeg-dev
