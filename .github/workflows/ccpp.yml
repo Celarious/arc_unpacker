@@ -18,7 +18,6 @@ jobs:
           curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
           wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
           sudo -E apt-add-repository -y 'ppa:ubuntu-toolchain-r/test'
-          sudo -E apt-add-repository -y 'ppa:kalakris/cmake'
           sudo -E apt-add-repository -y "ppa:boost-latest/ppa"
           sudo apt-get clean
           sudo apt-get update
