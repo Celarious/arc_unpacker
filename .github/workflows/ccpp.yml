@@ -35,9 +35,11 @@ jobs:
           export CMAKE_CXX_COMPILER=clang++
       - name: 2
         run: |
-          pwd
-          make -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
+          cd build
+          make -DCMAKE_BUILD_TYPE=release . # for debug build, change to debug
       - name: 3
-        run: make -j8
+        run: |
+          cd build
+          make -j8
       - name: Check exists
         run: ls -R
