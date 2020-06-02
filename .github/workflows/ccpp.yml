@@ -37,6 +37,6 @@ jobs:
               libjpeg-dev
           export CMAKE_CXX_COMPILER=clang++
       - name: 2
-        run: cmake -DCMAKE_BUILD_TYPE=release # for debug build, change to debug
+        run: cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
       - name: 3
         run: make -j8
