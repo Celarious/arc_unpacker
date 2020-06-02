@@ -90,7 +90,7 @@ endif()
 configure_file("${CMAKE_SOURCE_DIR}/src/version.h.in" "${CMAKE_BINARY_DIR}/generated/version.h" @ONLY)
 include_directories(${CMAKE_BINARY_DIR}/generated)
 
-set(CMAKE_SOURCE_DIR "${CMAKE_BINARY_DIR}/../")
+set(CMAKE_SOURCE_DIR "${CMAKE_BINARY_DIR}/")
 file(GLOB_RECURSE au_sources "${CMAKE_SOURCE_DIR}/src/*.cc")
 file(GLOB_RECURSE au_headers "${CMAKE_SOURCE_DIR}/src/*.h")
 file(GLOB_RECURSE test_sources "${CMAKE_SOURCE_DIR}/tests/*.cc")
