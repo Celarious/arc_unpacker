@@ -38,4 +38,4 @@ jobs:
       - name: 3
         run: make -j8
       - name: Check exists
-        run: cd build && ls
+        run: ls -R
