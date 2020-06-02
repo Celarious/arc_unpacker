@@ -42,4 +42,6 @@ jobs:
           cd build
           make -j8
       - name: Check exists
-        run: ls -R
+        run: |
+          ls -R
+          file build/arc_unpacker
