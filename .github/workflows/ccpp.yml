@@ -36,10 +36,11 @@ jobs:
               autopoint \
               bison \
               flex \
-              libtool \
+              libtool-bin \
+              libltdl-dev \
               lzip \
               gperf \
-              intoolize
+              intltool
           export CMAKE_CXX_COMPILER=clang++
           git clone https://github.com/mxe/mxe.git
       - name: 2
