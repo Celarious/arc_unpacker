@@ -32,7 +32,7 @@ jobs:
               libssl-dev \
               libpng-dev \
               libjpeg-dev \
-              libwepb-dev \
+              libwebp-dev \
               autopoint \
               bison \
               flex \
