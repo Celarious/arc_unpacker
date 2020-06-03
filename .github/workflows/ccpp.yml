@@ -33,14 +33,20 @@ jobs:
               libpng-dev \
               libjpeg-dev
           export CMAKE_CXX_COMPILER=clang++
+          git clone https://github.com/mxe/mxe.git
       - name: 2
         run: |
           cd build
-          cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
+          cd mxe
+          MXE_GCC_THREADS=posix \
+           MXE_PLUGIN_DIRS=plugins/gcc6/ \
+           make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
       - name: 3
         run: |
-          cd build
-          make -j8
+           mkdir build-mxe
+           cd build-mxe
+           ../build/mxe/i686-w64-mingw32.static-cmake ..
+           make -j8
       - name: Check exists
         run: |
           ls -R
