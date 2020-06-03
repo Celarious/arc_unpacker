@@ -51,7 +51,7 @@ jobs:
            MXE_PLUGIN_DIRS=plugins/gcc6/ \
            make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
           ls -R
-          export PATH=usr/bin:$PATH
+          export PATH=/home/runner/work/arc_unpacker/arc_unpacker/build/mxe/usr/bin:$PATH
       - name: 3
         run: |
            mkdir build-mxe
