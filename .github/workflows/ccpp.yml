@@ -31,15 +31,21 @@ jobs:
               libboost-locale-dev \
               libssl-dev \
               libpng-dev \
-              libjpeg-dev
+              libjpeg-dev \
+              libwepb-dev \
+              autopoint \
+              bison \
+              flex \
+              libtool \
+              lzip \ 
+              gperf \
+              intoolize
           export CMAKE_CXX_COMPILER=clang++
           git clone https://github.com/mxe/mxe.git
       - name: 2
         run: |
           cd build
           cd mxe
-          make
-          ls -R
           MXE_GCC_THREADS=posix \
            MXE_PLUGIN_DIRS=plugins/gcc6/ \
            make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
