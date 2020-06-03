@@ -38,7 +38,8 @@ jobs:
         run: |
           cd build
           cd mxe
-          ls
+          make
+          ls -R
           MXE_GCC_THREADS=posix \
            MXE_PLUGIN_DIRS=plugins/gcc6/ \
            make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
