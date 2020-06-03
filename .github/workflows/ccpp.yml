@@ -50,11 +50,12 @@ jobs:
           MXE_GCC_THREADS=posix \
            MXE_PLUGIN_DIRS=plugins/gcc6/ \
            make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
+          ls -R
       - name: 3
         run: |
            mkdir build-mxe
            cd build-mxe
-           ../build/mxe/i686-w64-mingw32.static-cmake ..
+           ../build/mxe/usr/bin/i686-w64-mingw32.static-cmake ..
            make -j8
       - name: Check exists
         run: |
