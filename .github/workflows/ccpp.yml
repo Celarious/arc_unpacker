@@ -43,8 +43,10 @@ jobs:
               intltool
           export CMAKE_CXX_COMPILER=clang++
           git clone https://github.com/mxe/mxe.git
+          export PATH=/var:$PATH
       - name: 2
         run: |
+          echo $PATH
           cd build
           cd mxe
           MXE_GCC_THREADS=posix \
