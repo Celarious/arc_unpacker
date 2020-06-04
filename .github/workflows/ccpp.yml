@@ -43,19 +43,18 @@ jobs:
               intltool
           export CMAKE_CXX_COMPILER=clang++
           git clone https://github.com/mxe/mxe.git
-          export PATH=/var:$PATH
       - name: 2
         run: |
-          echo $PATH
           cd build
           cd mxe
           MXE_GCC_THREADS=posix \
            MXE_PLUGIN_DIRS=plugins/gcc6/ \
            make libiconv zlib libpng jpeg boost openssl libwebp -j8 JOBS=8
           ls -R
-          export PATH=/home/runner/work/arc_unpacker/arc_unpacker/build/mxe/usr/bin:$PATH
       - name: 3
         run: |
+           export PATH=/home/runner/work/arc_unpacker/arc_unpacker/build/mxe/usr/bin:$PATH
+           echo $PATH
            mkdir build-mxe
            cd build-mxe
            ../build/mxe/usr/bin/i686-w64-mingw32.static-cmake ..
