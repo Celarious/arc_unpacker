@@ -24,15 +24,6 @@ jobs:
           sudo apt-get clean
           sudo apt-get update
           sudo apt-get install --force-yes \
-              cmake \
-              clang \
-              libboost-dev \
-              libboost-filesystem-dev \
-              libboost-locale-dev \
-              libssl-dev \
-              libpng-dev \
-              libjpeg-dev \
-              libwebp-dev \
               autopoint \
               bison \
               flex \
@@ -41,7 +32,6 @@ jobs:
               lzip \
               gperf \
               intltool
-          export CMAKE_CXX_COMPILER=clang++
           git clone https://github.com/mxe/mxe.git
       - name: 2
         run: |
